@@ -1,0 +1,10 @@
+<h1>Test the Infamous Swear Jar</h1>
+<h3>Type in a naughty word below</h3>
+
+<br />
+
+<%= form_for :swear_log, url: {controller: "swear_logs", action: "log_swear"} do |f| %>
+  <%= f.text_field :swear %>
+  <br />
+  <%= f.submit "Swear!" %>
+<% end %>

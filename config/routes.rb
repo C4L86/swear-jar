@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  root to: "devise#registrations#new"
+  get "swear_logs/swear_test" => 'swear_logs#swear_test'
+  post "log_swear" => 'swear_logs#log_swear'
+  # root to: "devise/sessions#new"
   
 end
