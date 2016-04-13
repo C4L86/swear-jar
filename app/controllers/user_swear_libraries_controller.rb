@@ -1,0 +1,3 @@
+class UserSwearLibrariesController < ApplicationController
+
+end

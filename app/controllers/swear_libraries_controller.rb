@@ -1,0 +1,3 @@
+class SwearLibrariesController < ApplicationController
+
+end

@@ -1,0 +1,3 @@
+class UserBankAccountsController < ApplicationController
+
+end

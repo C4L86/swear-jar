@@ -1,0 +1,3 @@
+class SwearLogsController < ApplicationController
+
+end

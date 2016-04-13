@@ -1,0 +1,3 @@
+class SwearCostsController < ApplicationController
+
+end
