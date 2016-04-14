@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :user_cost_setting do
+    user_id 1
+    swear_cost_id 1
+    outbound_account_id 1
+    inbound_account_id 1
+  end
   factory :inbound_account do
     user_id 1
     user_bank_account_id 1
