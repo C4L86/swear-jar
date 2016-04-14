@@ -1,4 +1,12 @@
 FactoryGirl.define do
+  factory :inbound_account do
+    user_id 1
+    user_bank_account_id 1
+    donor_account_id 1
+  end
+  factory :outbound_account do
+    user_bank_account_id 1
+  end
   factory :user do
     
   end
