@@ -18,8 +18,8 @@ class SwearLibrary < ActiveRecord::Base
      swear_arr << lib.swear
     end
     swear_arr.each do |swear|
-      final_swear << /#{swear}/.match(user_swear)
+      final_swear << user_swear.scan(/#{swear}/)
     end
-    final_swear.compact
+    final_swear.delete_if {|x| x == [] }
   end
 end
