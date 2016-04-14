@@ -2,10 +2,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :donor_accounts
+    resources :inbound_accounts
+    resources :outbound_accounts
     resources :swear_costs
     resources :swear_libraries
     resources :swear_logs
     resources :user_bank_accounts
+    resources :user_cost_settings
     resources :user_swear_libraries
     resources :users
 

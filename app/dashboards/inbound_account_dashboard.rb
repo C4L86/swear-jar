@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class SwearLogDashboard < Administrate::BaseDashboard
+class InboundAccountDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -10,12 +10,10 @@ class SwearLogDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     user_id: Field::Number,
-    swear_id: Field::Number,
-    user_swear_id: Field::Number,
-    route_or_not: Field::Boolean,
+    user_bank_account_id: Field::Number,
+    donor_account_id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    user_cost_setting_id: Field::Number,
   }
 
   # COLLECTION_ATTRIBUTES
@@ -26,8 +24,8 @@ class SwearLogDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :user_id,
-    :swear_id,
-    :user_swear_id,
+    :user_bank_account_id,
+    :donor_account_id,
   ]
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,12 +33,10 @@ class SwearLogDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :user_id,
-    :swear_id,
-    :user_swear_id,
-    :route_or_not,
+    :user_bank_account_id,
+    :donor_account_id,
     :created_at,
     :updated_at,
-    :user_cost_setting_id,
   ]
 
   # FORM_ATTRIBUTES
@@ -48,16 +44,14 @@ class SwearLogDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :user_id,
-    :swear_id,
-    :user_swear_id,
-    :route_or_not,
-    :user_cost_setting_id,
+    :user_bank_account_id,
+    :donor_account_id,
   ]
 
-  # Overwrite this method to customize how swear logs are displayed
+  # Overwrite this method to customize how inbound accounts are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(swear_log)
-  #   "SwearLog ##{swear_log.id}"
+  # def display_resource(inbound_account)
+  #   "InboundAccount ##{inbound_account.id}"
   # end
 end
