@@ -12,10 +12,10 @@ class SwearLogDashboard < Administrate::BaseDashboard
     user_id: Field::Number,
     swear_id: Field::Number,
     user_swear_id: Field::Number,
+    user_cost_setting_id: Field::Number,
     route_or_not: Field::Boolean,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
-    user_cost_setting_id: Field::Number,
+    updated_at: Field::DateTime, 
   }
 
   # COLLECTION_ATTRIBUTES
@@ -37,10 +37,10 @@ class SwearLogDashboard < Administrate::BaseDashboard
     :user_id,
     :swear_id,
     :user_swear_id,
+    :user_cost_setting_id,
     :route_or_not,
     :created_at,
     :updated_at,
-    :user_cost_setting_id,
   ]
 
   # FORM_ATTRIBUTES
@@ -50,8 +50,8 @@ class SwearLogDashboard < Administrate::BaseDashboard
     :user_id,
     :swear_id,
     :user_swear_id,
-    :route_or_not,
     :user_cost_setting_id,
+    :route_or_not,
   ]
 
   # Overwrite this method to customize how swear logs are displayed
