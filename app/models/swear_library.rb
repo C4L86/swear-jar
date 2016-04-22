@@ -22,7 +22,7 @@ class SwearLibrary < ActiveRecord::Base
     final_swear = []
 
     all_swears.each do |swear|
-      final_swear << user_swear.scan(/#{Regexp.escape(swear)}/im)
+      final_swear << user_swear.scan(/\b#{Regexp.escape(swear)}\b/im)
     end
     final_swear.delete_if {|x| x == []}
   end
