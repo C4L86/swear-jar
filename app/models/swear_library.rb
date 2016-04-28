@@ -19,12 +19,11 @@ class SwearLibrary < ActiveRecord::Base
   end
 
   def self.swear_check(user_swear)
-    final_swear = []
+    @final_swear = []
 
     all_swears.each do |swear|
-      final_swear << user_swear.scan(/#{swear}/)
+      @final_swear << user_swear.scan(/\b#{Regexp.escape(swear)}\b/im)
     end
-    final_swear.delete_if {|x| x == [] }
+    @final_swear.flatten
   end
-
 end
