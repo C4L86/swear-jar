@@ -8,7 +8,7 @@ class SwearLogsController < ApplicationController
       @logged_swear          = SwearLog.new
       @logged_swear.user_id  = @user.id
       @logged_swear.swear_id = SwearLibrary.find_by_swear(swear).id
-      @logged_swear.swear_cost_id = 5
+      @logged_swear.user_cost_setting_id = @user.user_cost_setting_id
       @logged_swear.save
     end
   end
